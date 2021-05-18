@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import automobile from "../stories/assets/automobile.jpg";
 import traffic from "../stories/assets/traffic.jpg";
 import Heading from "./Heading";
+import Button from "./Button";
 
 export default {
   title: "Components/Hero",
@@ -23,7 +24,9 @@ export const usage = () => (
 export const withList = () => (
   <Hero image={traffic}>
     <Heading>
-      <h1>{text("Title", "Ganhe sua liberdade de ir e vir")}</h1>
+      <h1>
+        Ganhe sua <strong>liberdade</strong> de ir e vir
+      </h1>
     </Heading>
 
     <ul>
@@ -37,5 +40,8 @@ export const withList = () => (
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi officiis
       </li>
     </ul>
+    <Button variant="outlined" color="primary">
+      Matricule-se agora
+    </Button>
   </Hero>
 );
