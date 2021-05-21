@@ -1,12 +1,13 @@
 import React from "react";
 
 import GlobalStyle from "../src/styles/GlobalStyle";
-import ThemeProvider from "../src/styles/ThemeProvider";
+import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
+import { select } from "@storybook/addon-knobs";
 export const decorators = [
   (StoryFn) => (
     <>
-      <GlobalStyle />
-      <ThemeProvider>
+      <ThemeProvider theme={select("Theme", ThemeNames, ThemeNames.light)}>
+        <GlobalStyle />
         <StoryFn />
       </ThemeProvider>
     </>

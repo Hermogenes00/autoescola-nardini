@@ -4,8 +4,6 @@ import { breakAt, BreakpointSize } from "./Breakpoints";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-const colorYellow = `#ffc107`;
-
 const GlobalStyle = createGlobalStyle`
   
   html{        
@@ -26,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight:700;
     letter-spacing:2px;
     strong {
-      color: ${colorYellow};
+      color: ${(props) => props.theme.colors.primary.main};
    }
   }
   h1{

@@ -30,13 +30,22 @@ const getDarkColor = ({ theme, color }) => {
     case ButtonColors.primary:
       return theme.colors.primary.dark;
     case ButtonColors.danger:
-      return theme.colors.primary.dark;
+      return theme.colors.danger.dark;
     default:
       return "#e0e0e0";
   }
 };
 
-const getColorText = (props) => props.theme.colors.primary.text;
+const getColorText = ({ color, theme }) => {
+  switch (color) {
+    case ButtonColors.primary:
+      return theme.colors.primary.text;
+    case ButtonColors.danger:
+      return theme.colors.danger.text;
+    default:
+      return "#212121";
+  }
+};
 
 const getOutlinedText = (props) => {
   if (props.color === ButtonColors.default) {

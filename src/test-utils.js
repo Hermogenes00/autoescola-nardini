@@ -3,7 +3,7 @@ import ThemeProvider from "../src/styles/ThemeProvider";
 import { render } from "@testing-library/react";
 
 const TestProvider = ({ children }) => (
-  <ThemeProvider>{children}</ThemeProvider>
+  <ThemeProvider theme="light">{children}</ThemeProvider>
 );
 
 export * from "@testing-library/react";
