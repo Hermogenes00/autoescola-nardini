@@ -4,10 +4,10 @@ import { text } from "@storybook/addon-knobs";
 
 import Hero from "./Hero";
 
-import automobile from "../stories/assets/automobile.jpg";
-import traffic from "../stories/assets/traffic.jpg";
-import Heading from "./Heading";
-import Button from "./Button";
+import automobile from "../../stories/assets/automobile.jpg";
+import traffic from "../../stories/assets/traffic.jpg";
+import Heading from "../atoms/Heading";
+import Button from "../atoms/Button";
 
 export default {
   title: "Components/Hero",
