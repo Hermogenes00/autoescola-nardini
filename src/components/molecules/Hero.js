@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
-import { breakAt, BreakpointSize } from "../../styles/Breakpoints";
+import Container from "components/atoms/Container";
 
 const Root = styled.div`
   color: #fff;
@@ -28,22 +28,8 @@ const Content = styled.div`
 
   li::before {
     content: "\\2713\\0020";
+    display: inline-block;
     color: ${(props) => props.theme.colors.primary.main};
-  }
-`;
-
-const Container = styled.div`
-  width: 100%;
-  padding: 0 8px;
-
-  ${breakAt(BreakpointSize.sm)} {
-    padding: 0 16px;
-  }
-
-  ${breakAt(BreakpointSize.lg)} {
-    max-width: 1140px;
-    padding: 0;
-    margin: 0 auto;
   }
 `;
 
