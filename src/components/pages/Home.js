@@ -7,6 +7,8 @@ import Heading from "../atoms/Heading";
 import trafficImage from "../../assets/traffic.jpg";
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import Section from "components/molecules/Section";
+import AboutVideo from "../../../src/assets/about.mp4";
+import Footer from "components/organisms/Footer";
 
 const Home = () => (
   <>
@@ -51,6 +53,37 @@ const Home = () => (
         </Feature>
       </Grid>
     </Section>
+    <Section inverse>
+      <Heading>
+        <h2>Conheça nossos serviços</h2>
+      </Heading>
+    </Section>
+    <Section>
+      <Grid md={2}>
+        <div>
+          <Heading>
+            <h2>Nardini auto escola</h2>
+          </Heading>
+
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            voluptatem itaque libero? Nobis enim nisi accusantium
+          </p>
+          <div>
+            <Button color="primary">Saiba mais</Button>
+          </div>
+        </div>
+        <div>
+          <video src={AboutVideo} width="100%" autoPlay loop />
+        </div>
+      </Grid>
+    </Section>
+    <Section inverse>
+      <Heading>
+        <h2>Dúvidas recorrentes</h2>
+      </Heading>
+    </Section>
+    <Footer />
   </>
 );
 
