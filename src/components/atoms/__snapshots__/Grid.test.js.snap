@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot  with no params 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: grid;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+<div
+    class="c0"
+  />
+</DocumentFragment>
+`;

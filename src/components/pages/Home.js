@@ -9,6 +9,40 @@ import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import Section from "components/molecules/Section";
 import AboutVideo from "../../../src/assets/about.mp4";
 import Footer from "components/organisms/Footer";
+import ProductGrid from "components/organisms/ProductGrid";
+
+const products = [
+  {
+    id: 1,
+    title: "1ª Habilitação Carro e Moto",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: trafficImage,
+  },
+  {
+    id: 2,
+    title: "1ª Habilitação Carro",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: trafficImage,
+  },
+  {
+    id: 3,
+    title: "1ª Habilitação Moto",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: trafficImage,
+  },
+  {
+    id: 4,
+    title: "Mudança de Categoria Caminhão",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: trafficImage,
+  },
+  {
+    id: 5,
+    title: "Aulas Avulsas",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: trafficImage,
+  },
+];
 
 const Home = () => (
   <>
@@ -57,6 +91,7 @@ const Home = () => (
       <Heading>
         <h2>Conheça nossos serviços</h2>
       </Heading>
+      <ProductGrid products={products} />
     </Section>
     <Section>
       <Grid md={2}>

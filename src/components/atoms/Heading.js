@@ -8,6 +8,7 @@ const Heading = styled.div`
   h5,
   h6 {
     position: relative;
+    display: inline-block;
     margin-bottom: 25px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
