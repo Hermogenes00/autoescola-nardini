@@ -1,6 +1,5 @@
-import { screen } from "@testing-library/dom";
 import React from "react";
-import { render, fireEvent } from "test-utils";
+import { render, screen, fireEvent } from "test-utils";
 
 import ProductGrid from "./ProductGrid";
 

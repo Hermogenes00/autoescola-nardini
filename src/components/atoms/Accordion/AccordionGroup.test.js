@@ -8,7 +8,7 @@ const title = "My title";
 
 const renderGroup = (n) => {
   const accordions = [];
-  for (i = 0; i < n; i++) {
+  for (let i = 0; i < n; i++) {
     accordions.push(
       <Accordion key={i} title={`Title ${i}`}>
         Child {i}
@@ -49,7 +49,7 @@ test("renders with all the accordions closed", async () => {
   expect(screen.queryByText("Child 2")).not.toBeInTheDocument();
 });
 
-test("opens accordion with click", () => {
+test("opens accordion with click", async () => {
   renderGroup(5);
 
   await fireEvent.click(screen.getByText("Title 4"));
@@ -61,7 +61,7 @@ test("opens accordion with click", () => {
   expect(screen.queryByText("Child 4")).toBeInTheDocument();
 });
 
-test("closes accordion with click", () => {
+test("closes accordion with click", async () => {
   renderGroup(5);
 
   await fireEvent.click(screen.getByText("Title 1"));
