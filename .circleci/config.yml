@@ -12,10 +12,15 @@ jobs:
       - node/install-yarn
       - run: node --version
       - run: yarn --version
-      - node/install-packages:
-      - run: npm lint
+     - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Run lint check
+          command: yarn lint
 
 workflows:
   ci:
     jobs:
       - tests
+
+
