@@ -14,7 +14,7 @@ jobs:
       - run: yarn --version
       - node/install-packages:
         pkg-manager: yarn
-      - run: yarn lint
+      - run: npm run lint
 
 workflows:
   ci:
