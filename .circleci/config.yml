@@ -13,7 +13,7 @@ jobs:
       - run: node --version
       - run: yarn --version
       - node/install-packages:
-       - run: npm run lint
+      - run: npm run lint
 
 workflows:
   ci:
