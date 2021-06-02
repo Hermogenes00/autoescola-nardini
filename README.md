@@ -3,7 +3,7 @@
 ![CircleCI](https://img.shields.io/circleci/build/github/Hermogenes00/autoescola-nardini)
 ![Codecov](https://img.shields.io/codecov/c/github/Hermogenes00/autoescola-nardini)
 
-Este projeto foi desenvolvido durante o curso [React Profissional](https://www.nardiniacademy.com)
+Este projeto foi desenvolvido durante o curso: [React Profissional](https://www.nardiniacademy.com)
 
 Curso recomendado pela própria documentação do React [Veja aqui](https://pt-br.reactjs.org/community/courses.html)
 
