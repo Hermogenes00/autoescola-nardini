@@ -22,7 +22,7 @@ const renderGroup = (n) => {
 test("renders whit one child", () => {
   render(
     <AccordionGroup>
-      <Accordion title={title} />
+      <Accordion title={title}>Children {title} </Accordion>
     </AccordionGroup>
   );
 
