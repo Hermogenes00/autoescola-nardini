@@ -24,20 +24,19 @@ jobs:
   versioning:
     docker:
       - image: circleci/node:14.17.0-browsers
-      steps:
-       - checkout
-       - run:
-            name: Check package version
-            command: node scripts/check-version Hermogenes00 autoescola-nardini
+    steps:
+      - checkout
+      - run:
+          name: Check package version
+          command: node scripts/check-version Hermogenes00 autoescola-nardini
 
 workflows:
   ci:
     jobs:
       - tests
       - versioning:
-          filters: 
+          filters:
             branches:
               ignore: master
             tags:
               ignore: /.*/
-
