@@ -54,9 +54,8 @@ const Accordion = ({ title, open: pOpen, onChange, children }) => {
 
     if (isControlled) {
       onChange(newState);
-    } else {
-      setOpen(newState);
     }
+    setOpen(newState);
   };
 
   return (
@@ -79,7 +78,7 @@ Accordion.defaultProps = {
 
 Accordion.propTypes = {
   title: PropTypes.string,
-  children: undefined,
+  children: PropTypes.node,
   open: PropTypes.bool,
   onChange: PropTypes.func,
 };

@@ -7,7 +7,7 @@ const title = "My Title";
 const text = "My children text";
 
 test("renders with title", () => {
-  render(<Accordion title={title}></Accordion>);
+  render(<Accordion title={title}>Body {title}</Accordion>);
   expect(screen.queryByText(title)).toBeInTheDocument();
 });
 
@@ -23,7 +23,7 @@ test("triggers onChange when it is clicked", async () => {
 
   await fireEvent.click(screen.getByText(title));
 
-  expect(handleChange).toBeCalledTimes(1);
+  expect(handleChange).not.toBeCalled();
 });
 
 describe("when is controlled", () => {

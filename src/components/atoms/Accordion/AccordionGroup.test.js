@@ -38,7 +38,7 @@ test("renders whit 3 child", () => {
     </AccordionGroup>
   );
 
-  expect(screen.getAllByAltText(title)).toHaveLength(3);
+  expect(screen.getAllByText(title)).toHaveLength(3);
 });
 
 test("renders with all the accordions closed", async () => {
