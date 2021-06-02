@@ -1,4 +1,3 @@
-import React from "react";
 import { BreakpointSize, breakAt } from "./Breakpoints";
 
 test("break at small device", () => {

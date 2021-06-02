@@ -29,7 +29,7 @@ const ProductGrid = ({ products }) => {
                 <p>{product.sumary}</p>
                 <div>
                   <Button color="primary" variant="link">
-                    Saiba mais
+                    Lista completa de serviços
                   </Button>
                 </div>
               </CardBody>
