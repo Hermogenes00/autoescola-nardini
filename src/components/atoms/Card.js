@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeConsumer } from "styled-components";
 
 //#region CardBody
 
@@ -81,7 +81,7 @@ CardMediaDescription.propTypes = {
 const StyledCard = styled.div`
   background-color: #fff;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid ${(props) => props.theme.colors.border};
   overflow: hidden;
   p {
     margin: 0;

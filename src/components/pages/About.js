@@ -5,11 +5,12 @@ import Heading from "components/atoms/Heading";
 import TrafficImage from "stories/assets/traffic.jpg";
 import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
+import Footer from "components/organisms/Footer";
 import Card, { CardMedia, CardMediaDescription } from "components/atoms/Card";
 
 import AboutImage from "draws/About";
 import styled from "styled-components";
-import Footer from "components/organisms/Footer";
+
 import InstImage1 from "assets/instructors/inst1.jpg";
 import InstImage2 from "assets/instructors/inst2.jpg";
 import InstImage3 from "assets/instructors/inst3.jpg";
