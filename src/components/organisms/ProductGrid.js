@@ -5,6 +5,7 @@ import Card, { CardBody, CardMedia } from "components/atoms/Card";
 import Button from "components/atoms/Button";
 import Heading from "components/atoms/Heading";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Toolbar = styled.div`
   margin-top: 40px;
@@ -28,8 +29,13 @@ const ProductGrid = ({ products }) => {
                 </Heading>
                 <p>{product.sumary}</p>
                 <div>
-                  <Button color="primary" variant="link">
-                    Lista completa de serviços
+                  <Button
+                    color="primary"
+                    as={Link}
+                    to="/servicos"
+                    variant="link"
+                  >
+                    Saiba Mais
                   </Button>
                 </div>
               </CardBody>

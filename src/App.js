@@ -1,13 +1,22 @@
 import React from "react";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyle";
 import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
 import Home from "./components/pages/Home";
+import About from "components/pages/About";
+import ProductDetail from "components/pages/ProductDetail";
+
 function App() {
   return (
     <ThemeProvider theme={ThemeNames.light}>
       <GlobalStyle />
-      <Home />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<About />} />
+          <Route path="/servicos" element={<ProductDetail />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }
