@@ -1,5 +1,5 @@
 import React from "react";
-import Card, { CardBody, CardMedia } from "./Card";
+import Card, { CardBody, CardMedia, CardMediaDescription } from "./Card";
 import Section from "components/molecules/Section";
 import CarImage from "../../stories/assets/card-placeholder.jpg";
 import Button from "./Button";
@@ -8,7 +8,7 @@ import Heading from "./Heading";
 export default {
   title: "Components/Atoms/Card",
   component: Card,
-  subcomponents: { CardBody, CardMedia },
+  subcomponents: { CardBody, CardMedia, CardMediaDescription },
 };
 
 export const usage = () => (
@@ -44,6 +44,18 @@ export const whitMedia = () => (
           Saiba mais
         </Button>
       </div>
+    </Card>
+  </Section>
+);
+
+export const onlyMedia = () => (
+  <Section inverse>
+    <Card>
+      <CardMedia image={CarImage}>
+        <CardMediaDescription>
+          <h5>Descrição da imagem</h5>
+        </CardMediaDescription>
+      </CardMedia>
     </Card>
   </Section>
 );

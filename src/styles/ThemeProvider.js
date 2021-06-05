@@ -12,13 +12,14 @@ const light = {
       main: `#ffc107`,
       dark: "#c79100",
       light: "#fff350",
-      text: "@fff",
+      text: "#212121",
     },
     danger: {
       main: `#ff3d00`,
       dark: "#b22a00",
       text: "#212121",
     },
+    border: "rgba(0,0,0,0.125)",
   },
 };
 const allThemes = {
@@ -31,7 +32,7 @@ const allThemes = {
         main: "#2196f3",
         dark: "#1769aa",
         light: "#4dabf5",
-        test: "#fff",
+        text: "#212121",
       },
     },
   },

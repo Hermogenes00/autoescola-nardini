@@ -1,4 +1,6 @@
 import React from "react";
+import { useScrollToTop } from "hooks/scroll";
+import { Link } from "react-router-dom";
 import Button from "../atoms/Button";
 import Grid from "../atoms/Grid";
 import Feature from "../atoms/Feature";
@@ -106,11 +108,20 @@ const Home = () => (
             voluptatem itaque libero? Nobis enim nisi accusantium
           </p>
           <div>
-            <Button color="primary">Saiba mais</Button>
+            <Button as={Link} to="/servicos" color="primary">
+              Saiba mais
+            </Button>
           </div>
         </div>
         <div>
-          <video src={AboutVideo} width="100%" autoPlay loop muted />
+          <video
+            src={AboutVideo}
+            width="100%"
+            autoPlay
+            playsInline
+            loop
+            muted
+          />
         </div>
       </Grid>
     </Section>
