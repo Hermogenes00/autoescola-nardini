@@ -1,4 +1,5 @@
 import React from "react";
+import ProductType from "types/ProductType";
 import BreadCrumb from "components/atoms/BreadCrumb";
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -34,18 +35,18 @@ const PinnedItem = styled.li`
   }
 `;
 
-const ProductDetail = () => {
+const ProductDetail = ({ product }) => {
   return (
     <>
       <Hero image={TrafficImage}>
         <Heading>
-          <h1>Nome do serviço</h1>
+          <h1>{product.title}</h1>
         </Heading>
         <BreadCrumb
           items={[
             { label: "Início", link: "/" },
             { label: "Serviços" },
-            { label: "Nome do Serviço" },
+            { label: product.title },
           ]}
         />
       </Hero>
@@ -108,6 +109,14 @@ const ProductDetail = () => {
       <Footer />
     </>
   );
+};
+
+ProductDetail.defaultProps = {
+  product: {},
+};
+
+ProductDetail.prototypes = {
+  product: ProductType,
 };
 
 export default ProductDetail;

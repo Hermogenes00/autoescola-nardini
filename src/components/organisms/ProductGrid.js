@@ -6,6 +6,7 @@ import Button from "components/atoms/Button";
 import Heading from "components/atoms/Heading";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ProductType from "types/ProductType";
 
 const Toolbar = styled.div`
   margin-top: 40px;
@@ -32,7 +33,7 @@ const ProductGrid = ({ products }) => {
                   <Button
                     color="primary"
                     as={Link}
-                    to="/servicos"
+                    to={`/servicos/${product.slung}`}
                     variant="link"
                   >
                     Saiba Mais
@@ -60,14 +61,7 @@ ProductGrid.defaultProps = {
 };
 
 ProductGrid.propTypes = {
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      image: PropTypes.string,
-      title: PropTypes.string,
-      sumary: PropTypes.string,
-    })
-  ),
+  products: PropTypes.arrayOf(ProductType),
 };
 
 export default ProductGrid;

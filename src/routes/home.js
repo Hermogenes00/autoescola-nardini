@@ -1,10 +1,12 @@
 import React from "react";
 import HomePage from "components/pages/Home";
 import { useScrollToTop } from "hooks/scroll";
+import { useProducts } from "hooks/products";
 
 const Home = () => {
   useScrollToTop();
-  return <HomePage />;
+  const products = useProducts();
+  return <HomePage products={products} />;
 };
 
 export default Home;
