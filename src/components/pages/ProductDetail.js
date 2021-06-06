@@ -1,6 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { useScrollToTop } from "hooks/scroll";
 import BreadCrumb from "components/atoms/BreadCrumb";
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -37,8 +35,6 @@ const PinnedItem = styled.li`
 `;
 
 const ProductDetail = () => {
-  useScrollToTop();
-
   return (
     <>
       <Hero image={TrafficImage}>
@@ -113,9 +109,5 @@ const ProductDetail = () => {
     </>
   );
 };
-
-ProductDetail.defaultProps = {};
-
-ProductDetail.propTypes = {};
 
 export default ProductDetail;

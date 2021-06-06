@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { useScrollToTop } from "hooks/scroll";
+import React from "react";
 
 import styled from "styled-components";
 
@@ -45,7 +43,6 @@ const items = [
 ];
 
 const About = () => {
-  useScrollToTop();
   return (
     <>
       <Hero image={TrafficImage}>
@@ -140,9 +137,5 @@ const About = () => {
     </>
   );
 };
-
-About.defaultProps = {};
-
-About.propTypes = {};
 
 export default About;
