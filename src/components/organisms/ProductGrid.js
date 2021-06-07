@@ -6,7 +6,7 @@ import Button from "components/atoms/Button";
 import Heading from "components/atoms/Heading";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import ProductType from "types/ProductType";
+import ProductType from "models/types/ProductType";
 
 const Toolbar = styled.div`
   margin-top: 40px;

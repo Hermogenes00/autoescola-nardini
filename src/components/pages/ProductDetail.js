@@ -1,5 +1,5 @@
 import React from "react";
-import ProductType from "types/ProductType";
+import ProductType from "models/types/ProductType";
 import BreadCrumb from "components/atoms/BreadCrumb";
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";

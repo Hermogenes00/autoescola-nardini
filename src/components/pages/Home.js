@@ -1,6 +1,6 @@
 import React from "react";
 import Proptypes from "prop-types";
-import ProductType from "types/ProductType";
+import ProductType from "models/types/ProductType";
 import { Link } from "react-router-dom";
 import Button from "../atoms/Button";
 import Grid from "../atoms/Grid";
