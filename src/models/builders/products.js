@@ -14,5 +14,6 @@ export const buildProductList = (size) => {
   }
   return result;
 };
-
+console.log("PRODUCTS.JS >>>");
+console.log(buildProductList(1));
 export const buildProduct = () => buildProductList(1)[0];
