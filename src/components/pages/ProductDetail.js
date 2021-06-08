@@ -1,6 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { useScrollToTop } from "hooks/scroll";
+import ProductType from "models/types/ProductType";
 import BreadCrumb from "components/atoms/BreadCrumb";
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -36,20 +35,18 @@ const PinnedItem = styled.li`
   }
 `;
 
-const ProductDetail = () => {
-  useScrollToTop();
-
+const ProductDetail = ({ product }) => {
   return (
     <>
       <Hero image={TrafficImage}>
         <Heading>
-          <h1>Nome do serviço</h1>
+          <h1>{product.title}</h1>
         </Heading>
         <BreadCrumb
           items={[
             { label: "Início", link: "/" },
             { label: "Serviços" },
-            { label: "Nome do Serviço" },
+            { label: product.title },
           ]}
         />
       </Hero>
@@ -114,8 +111,12 @@ const ProductDetail = () => {
   );
 };
 
-ProductDetail.defaultProps = {};
+ProductDetail.defaultProps = {
+  product: {},
+};
 
-ProductDetail.propTypes = {};
+ProductDetail.prototypes = {
+  product: ProductType,
+};
 
 export default ProductDetail;
